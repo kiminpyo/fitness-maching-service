@@ -1,0 +1,599 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey"
+    android:orientation="vertical"
+    tools:context=".fragment.TrainerDetailFragment">
+
+    <ProgressBar
+        android:id="@+id/progressBar2"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:background="#293859" />
+
+    <!--Top Header Layout-->
+    <LinearLayout
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:gravity="center_vertical"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/back_btn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="10dp"
+            android:src="@drawable/ic_arrow_back_24dp" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Edit Profile"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/save_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="저장"
+            android:textColor="@color/Red" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/topbar"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:paddingRight="20dp">
+
+            <!--Top Profile Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/circularbordersolid"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="150dp"
+                        android:layout_height="90dp"
+                        app:cardCornerRadius="6dp"
+                        app:cardElevation="0dp">
+
+                        <ImageView
+                            android:id="@+id/profile_image"
+                            android:layout_width="150dp"
+                            android:layout_height="90dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/ic_person" />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="75dp"
+                        android:layout_gravity="right"
+                        android:src="@drawable/ic_picture" />
+
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/userName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/proximanovaregular"
+                        android:text="트레이너 이름"
+                        android:textColor="#424242"
+                        android:textSize="21sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/userId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/proximanovaregular"
+                        android:text="트레이너 메일"
+                        android:textSize="14sp" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:paddingBottom="10dp">
+
+                    <TextView
+                        android:id="@+id/major_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="#전문분야"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/career_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="2dp"
+                        android:text="#대표 경력"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--Bootom Cards with sections-->
+            <LinearLayout
+                android:id="@+id/personalinfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="vertical">
+
+                <!--Contact Details-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/circularbordersolid"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/proximanovaregular"
+                            android:text="연락처"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+
+                        <Space
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/cal_btn"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:paddingRight="8dp">
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:background="@drawable/circular_grey_bordersolid"
+                                android:padding="10dp"
+                                android:src="@drawable/ic_call_24dp" />
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/callNum"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:fontFamily="@font/proximanovaregular"
+                                android:hint="전화번호"
+                                android:textColor="@color/goodgrey"
+                                android:textSize="15sp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!--About Me Card-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/circularbordersolid"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="10dp"
+                    android:padding="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/proximanovaregular"
+                                android:text="전문분야"
+                                android:textSize="17sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            android:orientation="horizontal"
+                            android:gravity="center"
+                            android:layout_marginBottom="20dp">
+
+                            <ImageView
+                                android:id="@+id/major_1"
+                                android:layout_width="70dp"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_major_diet_foreground"
+                                android:tag="다이어트"/>
+
+                            <ImageView
+                                android:id="@+id/major_2"
+                                android:layout_width="70dp"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_major_pill_foreground"
+                                android:tag="필라테스"/>
+
+                            <ImageView
+                                android:id="@+id/major_3"
+                                android:layout_width="70dp"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_major_fitness_foreground"
+                                android:tag="피트니스"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            android:orientation="horizontal"
+                            android:gravity="center"
+                            android:layout_marginBottom="20dp">
+
+                            <ImageView
+                                android:id="@+id/major_4"
+                                android:layout_width="70dp"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_major_fix_foreground"
+                                android:tag="체형교정"/>
+
+                            <ImageView
+                                android:id="@+id/major_5"
+                                android:layout_width="70dp"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_major_power_foreground"
+                                android:tag="파워리프팅"/>
+
+                            <ImageView
+                                android:id="@+id/major_6"
+                                android:layout_width="70dp"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_major_yoga_foreground"
+                                android:tag="요가"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <!--About Me Card-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/circularbordersolid"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/proximanovaregular"
+                                android:text="지역"
+                                android:textSize="17sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:orientation="horizontal"
+                            android:gravity="center"
+                            android:layout_marginBottom="20dp">
+
+                            <ImageView
+                                android:id="@+id/area_1"
+                                android:layout_width="50dp"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_area_deagu_junggu_foreground"
+                                android:tag="중구"/>
+
+                            <ImageView
+                                android:id="@+id/area_2"
+                                android:layout_width="50dp"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_area_deagu_donggu_foreground"
+                                android:tag="동구"/>
+
+                            <ImageView
+                                android:id="@+id/area_3"
+                                android:layout_width="50dp"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_area_deagu_seogu_foreground"
+                                android:tag="서구"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:orientation="horizontal"
+                            android:gravity="center"
+                            android:layout_marginBottom="20dp">
+
+                            <ImageView
+                                android:id="@+id/area_4"
+                                android:layout_width="50dp"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_area_deagu_namgu_foreground"
+                                android:tag="남구"/>
+
+                            <ImageView
+                                android:id="@+id/area_5"
+                                android:layout_width="50dp"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_area_deagu_buckgu_foreground"
+                                android:tag="북구"/>
+
+                            <ImageView
+                                android:id="@+id/area_6"
+                                android:layout_width="50dp"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_area_deagu_dalseo_foreground"
+                                android:tag="달서구"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <!--경력-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/circularbordersolid"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="주요경력"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+
+                        <Space
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+                    </LinearLayout>
+
+                    <EditText
+                        android:id="@+id/career_txt_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:fontFamily="@font/proximanovaregular"
+                        android:hint="대표경력을 입력해 주세요"
+                        android:textColor="#000000"
+                        android:textSize="17sp" />
+                    <EditText
+                        android:id="@+id/career_txt_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:fontFamily="@font/proximanovaregular"
+                        android:hint="경력사항을 입력해 주세요"
+                        android:textColor="#000000"
+                        android:textSize="17sp" />
+                    <EditText
+                        android:id="@+id/career_txt_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:fontFamily="@font/proximanovaregular"
+                        android:hint="경력사항을 입력해 주세요"
+                        android:textColor="#000000"
+                        android:textSize="17sp" />
+
+                </LinearLayout>
+
+                <!--자격-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/circularbordersolid"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="자격사항"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+
+                        <Space
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+                    </LinearLayout>
+
+                    <EditText
+                        android:id="@+id/cert_txt_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:fontFamily="@font/proximanovaregular"
+                        android:hint="자격사항을 입력해 주세요"
+                        android:textColor="#000000"
+                        android:textSize="17sp" />
+                    <EditText
+                        android:id="@+id/cert_txt_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:fontFamily="@font/proximanovaregular"
+                        android:hint="자격사항을 입력해 주세요"
+                        android:textColor="#000000"
+                        android:textSize="17sp" />
+                    <EditText
+                        android:id="@+id/cert_txt_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:fontFamily="@font/proximanovaregular"
+                        android:hint="자격사항을 입력해 주세요"
+                        android:textColor="#000000"
+                        android:textSize="17sp" />
+
+                </LinearLayout>
+
+                <!--Contact Details-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/circularbordersolid"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/proximanovaregular"
+                            android:text="트레이너 소개"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+
+                        <Space
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/introduce_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="트레이너 소개를 입력해 주세요" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

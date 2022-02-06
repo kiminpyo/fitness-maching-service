@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/trainer_list"
+        android:icon="@drawable/trainner_list"
+        android:title="트레이너 찾기" />
+    <item
+        android:id="@+id/management_list"
+        android:icon="@drawable/manage"
+        android:title="진행중인 PT" />
+    <item
+        android:id="@+id/request_list"
+        android:icon="@drawable/reservation"
+        android:title="신청 내역" />
+    <item
+        android:id="@+id/my_setting"
+        android:icon="@drawable/settings"
+        android:title="환경설정" />
+</menu>

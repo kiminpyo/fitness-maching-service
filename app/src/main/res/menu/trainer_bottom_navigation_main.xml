@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/trainer_home"
+        android:icon="@drawable/profile"
+        android:title="대표 프로필" />
+    <item
+        android:id="@+id/management_list"
+        android:icon="@drawable/manage"
+        android:title="관리중인 회원" />
+
+    <item
+        android:id="@+id/request_list"
+        android:icon="@drawable/request"
+        android:title="받은 요청" />
+
+    <item
+        android:id="@+id/my_setting"
+        android:icon="@drawable/settings"
+        android:title="환경설정" />
+</menu>

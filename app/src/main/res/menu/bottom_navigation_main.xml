@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/action_people"
+        android:icon="@drawable/ic_launcher_foreground"
+        android:title="People"/>
+    <item
+        android:id="@+id/action_chat"
+        android:icon="@drawable/ic_launcher_background"
+        android:title="People"/>
+    <item
+        android:id="@+id/action_account"
+        android:icon="@drawable/common_google_signin_btn_icon_dark_normal_background"
+        android:title="People"/>
+</menu>
